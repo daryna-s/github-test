@@ -1,8 +1,6 @@
-const apartment = {
-    imgUrl: "https://via.placeholder.com/640x480",
-    descr: "Spacious apartment in the city center",
-    rating: 4,
-    price: 2153,
-    tags: ["premium", "promoted", "top"]
-};
-console.log(apartment);
+const sortByAscendingBalance = 
+   [...users].sort((firstUser, secondUser) =>
+    firstUser.balance - secondUser.balance);
+
+[...users].sort((firstUser, secondUser) => firstUser.balance.localeCompare(secondUser.balance));
+// Change code above this line
