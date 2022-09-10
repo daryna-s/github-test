@@ -227,7 +227,7 @@
 
 // console.log(shoppingSpree(wishlist)); // 227005
 
-// task - 08 
+// task - 08
 // Отримайте ініціали імені
 // Даний рядок із кількох слів із одним пробілом між кожним із них. Скоротіть назву та поверніть ініціали імені.
 
@@ -274,3 +274,181 @@
 //   })
 //   .join(' ');
 // console.log(res);
+
+// task 02
+// За допомогою методу map вивести в DOM дерево список із картками. Розміри картоко 150px на 150px.
+// Картинка має бути фоновим зображенням всієї картки
+// На кожній картці є кнопка. В кнопці виводиться текст із type
+// По кліку на кнопку має показуватись тип картки в тегові div - текст із кнопки
+// По кліку на всю картку має показуватись preview всієї картинки - в тегові div поруч зі списком або в модальному вікні
+// / const data = [
+//   {
+//     id: 1,
+//     image: 'https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?cs=srgb&dl=pexels-jaime-reimer-2662116.jpg&fm=jpg',
+//     type: 'post',
+//     title: 'Lake',
+//   },
+//   {
+//     id: 2,
+//     image: 'https://images.pexels.com/photos/327098/pexels-photo-327098.jpeg?cs=srgb&dl=pexels-pixabay-327098.jpg&fm=jpg',
+//     type: 'product',
+//     title: 'Tangerine'
+//   },
+//   {
+//     id: 3,
+//     image: 'https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//     type: 'post',
+//     title: 'City',
+//   }
+// ]
+
+
+// task 03
+// Даний список повідомлень із кнопками для видалення [x]. Напишіть код,
+//  щоб кнопки працювали.
+//
+// <!DOCTYPE HTML>
+// <html>
+//
+// <head>
+// <link rel="stylesheet" href="messages.css">
+//   <meta charset="utf-8">
+//   </head>
+//
+// <body>
+//
+// <div id="container">
+//   <div class="pane">
+//     <h3>Lorem Ipsum</h3>
+//     <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+//     <button class="remove-button">[x]</button>
+//   </div>
+//   <div class="pane">
+//     <h3>Where does it come from?</h3>
+//     <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+//     <button class="remove-button">[x]</button>
+//   </div>
+//   <div class="pane">
+//     <h3>Why do we use it?</h3>
+//     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+//     <button class="remove-button">[x]</button>
+//   </div>
+// </div>
+//
+// <script>
+//
+// </script>
+//
+// </body>
+// </html>
+// const container = document.querySelector('#container');
+
+// container.addEventListener('click', onClickClose);
+
+// function onClickClose(e) {
+//   const currentClassEl = e.target.className;
+//   console.dir(currentClassEl);
+
+//   if (currentClassEl === 'remove-button') {
+//     const element = e.target.closest('.pane');
+
+//     if (element) {
+//       element.remove();
+//     }
+//   }
+// }
+
+
+// task 04
+
+// Змініть стиль тексту абзацу за допомогою коду JavaScript
+//
+// <!DOCTYPE html>
+// <html>
+// <head>
+// <meta charset=utf-8 />
+//   <title>JS DOM paragraph style</title>
+// </head>
+// <body>
+// <p id ='text'>JavaScript Exercises</p>
+// <div>
+//   <button id="jsstyle">Style</button>
+// </div>
+// </body>
+// </html>
+//
+// При натисканні на кнопку буде змінено шрифт, розмір шрифту та колір тексту абзацу.
+// При наступному натисканні кнопки буде змінюватись колір параграфу. Після кожного кліку буде пісдтавлятись колір із масиву colors послідовно
+
+// const colors = ['gold', 'green', 'yellow', 'blue', 'black', 'brown'];
+// const btn = document.querySelector(`#jsstyle`);
+// const text = document.querySelector(`#text`);
+// let i = 0;
+// btn.addEventListener(`click`, e =>{
+//     text.style.color = colors[i];
+//     text.style.fontFamily = `Arial`;
+//     text.style.fontSize = `36px`;
+//     i += 1;
+// })
+
+
+
+// task 05
+
+// / Напишіть функцію JavaScript, щоб отримати значення атрибутів href, rel, target і type для вказаного посилання
+
+// <!DOCTYPE html>
+// <html>
+// <head>
+// <meta charset=utf-8 />
+//   </head>
+// <body>
+// <p><a id="w3r" type="text/html" rel="nofollow" target="_self" href="https://www.w3resource.com/">w3resource</a></p>
+// <button>Click here to get  attributes value</button>
+// </body></html>
+
+// task 06
+
+// Напишіть програму JavaScript для добавлення та видалення елементів зі спадного списку.
+
+// <!DOCTYPE html>
+// <html><head>
+// <meta charset=utf-8 />
+//   <title>Remove items from a dropdown list</title>
+// </head><body><form>
+//   <select id="colorSelect">
+//     <option>Red</option>
+//     <option>Green</option>
+//     <option>White</option>
+//     <option>Black</option>
+//   </select>
+//   <input type="button" value="Select and Remove">
+// </form>
+// </body>
+// </html>
+
+// task 07
+
+// Напишіть програму JavaScript, щоб виділяти жирні слова (<strong>) наступного абзацу, наводячи курсор миші на посилання
+
+// <head>
+//   <meta charSet="UTF-8">
+//     <title>Get And Style All Tags</title>
+// </head>
+// <body>
+// <p>[<a href="#" onMouseOver="highlight()" onMouseOut="return_normal()">On mouse over here bold words of the following
+//   paragraph will be highlighted</a>]</p>
+// <p><strong>We</strong> have just started <strong>this</strong> section for the users (<strong>beginner</strong> to
+//   intermediate) who <strong>want</strong> to work with <strong>various</strong> JavaScript <strong>problems</strong> and
+//   write scripts online to <strong>test</strong> 
+{/* <head>
+  <meta charSet="UTF-8">
+    <title>Get And Style All Tags</title>
+</head>
+<body>
+<p>[<a href="#" onMouseOver="highlight()" onMouseOut="return_normal()">On mouse over here bold words of the following
+  paragraph will be highlighted</a>]</p>
+<p><strong>We</strong> have just started <strong>this</strong> section for the users (<strong>beginner</strong> to
+  intermediate) who <strong>want</strong> to work with <strong>various</strong> JavaScript <strong>problems</strong> and
+  write scripts online to <strong>test</strong> their JavaScript <strong>skill</strong>.</p>
+</body> */}
